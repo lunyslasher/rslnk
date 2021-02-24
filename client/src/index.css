@@ -1,1 +1,14 @@
-@import "~materialize-css/dist/css/materialize.min.css";
+@import "~materialize-css/dist/css/materialize.css";
+
+.wrap {
+    min-height: 100%;
+    min-width: 1080px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #222;
+    color: white;
+}
