@@ -8,7 +8,7 @@
         "start": "cross-env NODE_ENV=production node app.js",
         "server": "nodemon app.js",
         "client": "npm run start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
     },
     "dependencies": {
         "body-parser": "^1.18.2",
@@ -16,7 +16,11 @@
         "eris": "^0.8.4",
         "express": "^4.16.2",
         "formidable": "^1.1.1",
+        "nodemon": "^2.0.7",
         "path": "^0.12.7",
         "remarkable": "^1.7.1"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3"
     }
 }
