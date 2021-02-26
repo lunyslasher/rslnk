@@ -256,7 +256,7 @@ app.post("/api/files", (req, res) => {
     });
 });
 
-app.listen(80, () => {
+app.listen(7777, () => {
     console.log("API listening on port 80");
 });
 
@@ -264,7 +264,7 @@ const options = {
     cert: fs.readFileSync("./fullchain.pem"),
     key: fs.readFileSync("./privkey.pem"),
 };
-https.createServer(options, app).listen(443);
+https.createServer(options, app).listen(8443);
 function randomToken(number) {
     number = parseInt(number);
     let text = "";
