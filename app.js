@@ -14,6 +14,7 @@ const md = new Remarkable("full", {
     linkify: true,
     typographer: true,
 });
+const serveIndex = require('serve-index');
 
 // APP SETTINGS
 app.use(bodyParser.text());
@@ -26,6 +27,10 @@ app.use(
     express.static("./pages/", {
         extensions: ["html", "css"],
     })
+);
+
+app.use('/files',
+    express.static("./files/"), serveIndex('public/ftp')
 );
 
 app.get(`/discord`, (req, res) => {
@@ -259,12 +264,6 @@ app.post("/api/files", (req, res) => {
 app.listen(7777, () => {
     console.log("API listening on port 80");
 });
-
-const options = {
-    cert: fs.readFileSync("./fullchain.pem"),
-    key: fs.readFileSync("./privkey.pem"),
-};
-https.createServer(options, app).listen(8443);
 function randomToken(number) {
     number = parseInt(number);
     let text = "";
