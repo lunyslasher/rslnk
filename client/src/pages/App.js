@@ -12,13 +12,15 @@ You can find me here:
 
 .-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.
 |                                         |
-|  <a target='blank' href='https://vk.com/looney756'>VK</a> <a target='blank' href='https://rslnk.ru/discord'>Discord</a> <a target='blank' href='https://github.com/looney756'>GitHub</a> <a target='blank' href='https://instagram.com/looneyrevice'>Inst</a> <a target='blank' href='https://t.me/looney756'>Telegram</a> <a target='blank' href='https://steamcommunity.com/id/looney756/'>Steam</a>  |
+|  <a target='blank' href='https://vk.com/lunyslasher'>VK</a> <a target='blank' href='https://rslnk.ru/discord'>Discord</a> <a target='blank' href='https://github.com/lunyslasher'>GitHub</a> <a target='blank' href='https://instagram.com/lunyslasher'>Inst</a> <a target='blank' href='https://t.me/lunyslasher'>Telegram</a> <a target='blank' href='https://steamcommunity.com/id/lunyslasher/'>Steam</a>  |
 |                                         |
 '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
 
 Here are some cool commands for you:
 
-<b>settings</b>       My rainbow six siege settings
+<b>siege</b>          My rainbow six siege settings
+
+<b>csgo</b>           My cs:go settings
 
 <b>uptime</b>         Check my host machine uptime
 
@@ -71,11 +73,19 @@ Enjoy! #rock4ever
                                 });
                             },
                         },
-                        settings: {
+                        siege: {
                             description: "R6",
                             fn: (...args) => {
                                 return new Promise((resolve, reject) => {
                                     resolve("Sens: H: 11 V: 11 ADS: 32 / 42 / 46 / 48\n\nDisplay: 1280x1024 75hz / 16:10 / FOV 90 / All low/off");
+                                });
+                            },
+                        },
+                        csgo: {
+                            description: "csgo",
+                            fn: (...args) => {
+                                return new Promise((resolve, reject) => {
+                                    resolve("Sens: 1.225 DPI 400\n\nDisplay: 1280x1024 75hz / 4:3 / All low/off");
                                 });
                             },
                         },

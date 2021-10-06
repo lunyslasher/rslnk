@@ -119,7 +119,7 @@ app.post("/api/paste", (req, res) => {
                             fs.unlink(newpath, (err) => {
                                 if (err) return console.log(err);
                             });
-                            res.write(`http://${req.headers.host}/${fileName}`);
+                            res.write(`http://rslnk.ru/${fileName}`);
                             return res.end();
                         });
                     });
@@ -197,7 +197,7 @@ app.post("/api/files", (req, res) => {
                         });
                     }
                     if (err) return res.write(err);
-                    res.write(`http://${req.headers.host}/${fileName}`);
+                    res.write(`http://rslnk.ru/${fileName}`);
                     return res.end();
                 });
             }
@@ -252,7 +252,7 @@ app.post("/api/files", (req, res) => {
                             });
                         }
                         if (err) return res.write(err);
-                        res.write(`http://${req.headers.host}/${fileName}`);
+                        res.write(`http://rslnk.ru/${fileName}`);
                         return res.end();
                     });
                 }
